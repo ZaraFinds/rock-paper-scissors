@@ -4,86 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <script>
-
+    
+    <div class="container">
+        <h1 class=>Welcome to the Rock Paper Scissors Game!</h1>
+        <h2 class=>Game rules: paper beats rock, rock beats scissos and scissors beats paper. First one to get 5 scores wins!</h2>
         
-        let playerScore = 0;
-        let computerScore = 0;
-        const CHOICES = ['rock', 'paper', 'scissors'];
+        <div class=>
+            <button id='rock'>Rock</button>
+            <button id='paper'>Paper</button>
+            <button id='scissors'>Scissors</button>
 
-        function computerPlay() {
+        </div>
+        <p class=></p>
+        <div class="score-board">
+            <span id="p-score" >Your Score: 0</span> <span id='c-score'>Robot's Score: 0</span>
+            
+        </div>
+    </div>
+    
+    <script src='script.js'>
+        
+        /////// This is the code for the cosole version! ///////
+        
+        // let playerScore = 0;
+        // let computerScore = 0;
+        // const CHOICES = ['rock', 'paper', 'scissors'];
 
-        const randNum = Math.floor(Math.random() * CHOICES.length);
-        return CHOICES[randNum];
-        }
+        // function computerPlay() {
+
+        // const randNum = Math.floor(Math.random() * CHOICES.length);
+        // return CHOICES[randNum];
+        // }
         
 
-        function playRound(){
+        // function playRound(){
 
-            const playerSelection = prompt('Please make a choice between rock, paper and scissors.').toLowerCase();
-            const computerSelection = computerPlay();
+        //     const playerSelection = prompt('Please make a choice between rock, paper and scissors.').toLowerCase();
+        //     const computerSelection = computerPlay();
 
-            if (playerSelection == computerSelection) {
-                console.log('Tie')
+        //     if (playerSelection == computerSelection) {
+        //         console.log('Tie')
 
-            } else if(playerSelection == 'rock' && computerSelection == 'paper') {
-                computerScore++;
-                console.log(`You lose, paper beats rock!`);
+        //     } else if(playerSelection == 'rock' && computerSelection == 'paper') {
+        //         computerScore++;
+        //         console.log(`You lose, paper beats rock!`);
                 
 
-            } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-                playerScore++;
-                console.log('You win, rock beats scissors!');
+        //     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+        //         playerScore++;
+        //         console.log('You win, rock beats scissors!');
                 
 
-            } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-                playerScore++;
-                console.log( 'You win, paper beats rock!');
+        //     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+        //         playerScore++;
+        //         console.log( 'You win, paper beats rock!');
                 
 
-            } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-                computerScore++;
-                console.log('You lose! scissors beats paper!');
+        //     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+        //         computerScore++;
+        //         console.log('You lose! scissors beats paper!');
                 
                 
 
-            } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-                computerScore++;
-                console.log('You lose! rock beats scissors!');
+        //     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+        //         computerScore++;
+        //         console.log('You lose! rock beats scissors!');
                 
                
 
-            } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-                playerScore++;
-                console.log('You win! scissors beats paper!');
+        //     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+        //         playerScore++;
+        //         console.log('You win! scissors beats paper!');
                 
-            } else {
-                console.log('Wrong Input')
-            }
+        //     } else {
+        //         console.log('Wrong Input')
+        //     }
                 
             
-            console.log(`Your score: ${playerScore}, Robot score: ${computerScore}`)
+        //     console.log(`Your score: ${playerScore}, Robot score: ${computerScore}`)
         
 
-        }
+        // }
              
-        function game() {
-            for(let i=0; i<5; i++) {
-                playRound()
-            }
+        // function game() {
+        //     for(let i=0; i<5; i++) {
+        //         playRound()
+        //     }
 
-            if (playerScore > computerScore) {
-                console.log('You are the final winner!')
-            } else if (playerScore < computerScore) {
-                console.log('Robot is the final winner!')
-            } else {
-                console.log('There are no winners!')
-            }
-        }
+        //     if (playerScore > computerScore) {
+        //         console.log('You are the final winner!')
+        //     } else if (playerScore < computerScore) {
+        //         console.log('Robot is the final winner!')
+        //     } else {
+        //         console.log('There are no winners!')
+        //     }
+        // }
 
-        game()
+        // game()
 
     </script>
 </body>
